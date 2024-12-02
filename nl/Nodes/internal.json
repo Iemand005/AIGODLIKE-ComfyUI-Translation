@@ -772,7 +772,7 @@
             "vae": "vae"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "VAEEncode": {
@@ -786,7 +786,7 @@
         }
     },
     "EmptyLatentImage": {
-        "title": "Leeg Latent Beeld Afbeelding",
+        "title": "Leege Latente Afbeelding",
         "widgets": {
             "width": "Breedte",
             "height": "Hoogte",
@@ -889,7 +889,7 @@
                 "disabled": "Uitgeschakeld"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "ImageScaleBy": {
@@ -906,7 +906,7 @@
             "scale_by": "Verhouding"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "ImageUpscaleWithModel": {
@@ -916,7 +916,7 @@
             "image": "afbeelding"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "ImageScaleToTotalPixels": {
@@ -933,7 +933,7 @@
             "megapixels": "메가Pixels"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
 
@@ -954,7 +954,7 @@
                 "soft_light": "부드러운 빛"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "ImageBlur": {
@@ -967,7 +967,7 @@
             "sigma": "Sigmas"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "ImageQuantize": {
@@ -982,7 +982,7 @@
                 "floyd-steinberg": "플로이드 스타인버그 알고리즘"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "ImageSharpen": {
@@ -991,12 +991,12 @@
             "image": "afbeelding"
         },
         "widgets": {
-            "sharpen_radius": "날카로운 범위",
+            "sharpen_radius": "날카로운 범boven",
             "sigma": "Sigmas",
-            "alpha": "알파"
+            "alpha": "alfa"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
 
@@ -1011,7 +1011,7 @@
             "high_threshold": "높은 임계값"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
 
@@ -1028,7 +1028,7 @@
             "y": "Y"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "RepeatImageBatch": {
@@ -1037,10 +1037,10 @@
             "image": "afbeelding"
         },
         "widgets": {
-            "amount": "수량"
+            "amount": "hoeveelheid"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
 
@@ -1055,20 +1055,20 @@
         }
     },
     "PreviewImage": {
-        "title": "미리보기 Afbeelding",
+        "title": "Afbeeldingsweergave",
         "inputs": {
             "images": "afbeeldingen"
         }
     },
     "LoadImage": {
-        "title": "Afbeelding Lader",
+        "title": "Afbeelding Laden",
         "widgets": {
             "image": "afbeelding",
-            "choose file to upload": "업로드할 파일 Selectie"
+            "choose file to upload": "Kies een bestand om te uploaden"
         },
         "outputs": {
-            "IMAGE": "Afbeelding",
-            "MASK": "Masker"
+            "IMAGE": "AFBEELDING",
+            "MASK": "MASKER"
         }
     },
     "ImageInvert": {
@@ -1077,7 +1077,7 @@
             "image": "afbeelding"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "ImageBatch": {
@@ -1087,7 +1087,7 @@
             "image2": "Afbeelding2"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "ImagePadForOutpaint": {
@@ -1096,15 +1096,15 @@
             "image": "afbeelding"
         },
         "widgets": {
-            "left": "왼쪽",
-            "top": "위",
-            "right": "오른쪽",
-            "bottom": "아래",
-            "feathering": "Veer링"
+            "left": "links",
+            "top": "boven",
+            "right": "rechts",
+            "bottom": "onder",
+            "feathering": "vering"
         },
         "outputs": {
-            "IMAGE": "Afbeelding",
-            "MASK": "Masker"
+            "IMAGE": "AFBEELDING",
+            "MASK": "MASKER"
         }
     },
     "EmptyImage": {
@@ -1113,10 +1113,10 @@
             "width": "Breedte",
             "height": "Hoogte",
             "batch_size": "Batch Grootte",
-            "color": "컬러"
+            "color": "Kleur"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "ImageCompositeMasked": {
@@ -1132,7 +1132,7 @@
             "resize_source": "Van Afbeelding Grootte 조절"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
 
@@ -1143,47 +1143,47 @@
         "title": "포터-더프 Afbeelding Samenvoeger",
         "inputs": {
             "source": "Van Afbeelding",
-            "source_alpha": "Van 알파",
+            "source_alpha": "Van alfa",
             "destination": "Naar Afbeelding",
-            "destination_alpha": "Naar 알파"
+            "destination_alpha": "Naar alfa"
         },
         "widgets": {
             "mode": "모드"
         },
         "outputs": {
-            "IMAGE": "Afbeelding",
-            "MASK": "Masker"
+            "IMAGE": "AFBEELDING",
+            "MASK": "MASKER"
         }
     },
     "SplitImageWithAlpha": {
-        "title": "Afbeelding Divisie (알파)",
+        "title": "Afbeelding Divisie (alfa)",
         "inputs": {
             "image": "afbeelding"
         },
         "outputs": {
-            "IMAGE": "Afbeelding",
-            "MASK": "Masker"
+            "IMAGE": "AFBEELDING",
+            "MASK": "MASKER"
         }
     },
     "JoinImageWithAlpha": {
-        "title": "Afbeelding Combinering (알파)",
+        "title": "Afbeelding Combinering (alfa)",
         "inputs": {
             "image": "afbeelding",
-            "alpha": "투명 Masker"
+            "alpha": "transparantie Masker"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "LoadImageMask": {
         "title": "Afbeelding Masker Lader",
         "widgets": {
             "image": "afbeelding",
-            "channel": "채널",
+            "channel": "kanaal",
             "choose file to upload": "업로드할 파일 Selectie"
         },
         "outputs": {
-            "MASK": "Masker"
+            "MASK": "MASKER"
         }
     },
     "MaskToImage": {
@@ -1192,7 +1192,7 @@
             "mask": "masker"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "ImageToMask": {
@@ -1201,36 +1201,36 @@
             "image": "afbeelding"
         },
         "widgets": {
-            "channel": "채널"
+            "channel": "kanaal"
         },
         "outputs": {
-            "MASK": "Masker",
+            "MASK": "MASKER",
                 "red": "레드",
                 "green": "그린",
                 "blue": "블루"
         }
     },
     "ImageColorToMask": {
-        "title": "Afbeelding 컬러 Masker",
+        "title": "Afbeelding Kleur Masker",
         "inputs": {
             "image": "afbeelding"
         },
         "widgets": {
-            "color": "컬러"
+            "color": "Kleur"
         },
         "outputs": {
-            "MASK": "Masker"
+            "MASK": "MASKER"
         }
     },
     "SolidMask": {
-        "title": "솔리드 Masker (단색)",
+        "title": "Opgevuld Masker (Even Kleur)",
         "widgets": {
             "value": "명°",
             "width": "Breedte",
             "height": "Hoogte"
         },
         "outputs": {
-            "MASK": "Masker"
+            "MASK": "MASKER"
         }
     },
     "InvertMask": {
@@ -1239,7 +1239,7 @@
             "mask": "masker"
         },
         "outputs": {
-            "MASK": "Masker"
+            "MASK": "MASKER"
         }
     },
     "CropMask": {
@@ -1254,7 +1254,7 @@
             "height": "Hoogte"
         },
         "outputs": {
-            "MASK": "Masker"
+            "MASK": "MASKER"
         }
     },
     "MaskComposite": {
@@ -1275,7 +1275,7 @@
                 "xor": "배타적 논리합"
         },
         "outputs": {
-            "MASK": "Masker"
+            "MASK": "MASKER"
         }
     },
     "FeatherMask": {
@@ -1284,13 +1284,13 @@
             "mask": "masker"
         },
         "widgets": {
-            "left": "왼쪽",
-            "top": "위",
-            "right": "오른쪽",
-            "bottom": "아래"
+            "left": "links",
+            "top": "boven",
+            "right": "rechts",
+            "bottom": "onder"
         },
         "outputs": {
-            "MASK": "Masker"
+            "MASK": "MASKER"
         }
     },
     "GrowMask": {
@@ -1303,7 +1303,7 @@
             "tapered_corners": "둥근 모서리"
         },
         "outputs": {
-            "MASK": "Masker"
+            "MASK": "MASKER"
         }
     },
     
@@ -1320,7 +1320,7 @@
             "tile_size": "Tegel 사이즈"
         },
         "outputs": {
-            "IMAGE": "Afbeelding"
+            "IMAGE": "AFBEELDING"
         }
     },
     "VAEEncodeTiled": {
@@ -1531,7 +1531,7 @@
         }
     },
     "ConditioningSetTimestepRange": {
-        "title": "Conditionering (타임 stappen 범위 Configuratie)",
+        "title": "Conditionering (타임 stappen 범boven Configuratie)",
         "inputs": {
             "conditioning": "conditionering"
         },
