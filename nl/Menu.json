@@ -2304,5 +2304,16 @@
     "Star on Github": "Geef ster op GitHub",
     "Undo": "Ongedaan maken",
     "Redo": "Opnieuw doen",
-    "Refresh Node Definitions": "Node Definities Vernieuwen"
+    "Refresh Node Definitions": "Node Definities Vernieuwen",
+    "Clear Workflow": "Workflow Leegmaken",
+    "ComfyUI Issues": "ComfyUI Problemen",
+    "No Tasks Found": "Geen Taken Gevonden",
+    "QUEUE": "WACHTRIJ",
+    "NODE LIBRARY": "NODE BIBLIOTHEEK",
+    "MODEL LIBRARY": "MODEL BIBLIOTHEEK",
+    "Browse": "Bladeren",
+    "Search Nodes...": "Zoek Nodes...",
+    "Search Models...": "Zoek Modellen...",
+    "Search Workflows...": "Zoek Workflows...",
+    "There are no tasks in the queue.": "Er zijn geen taken in de wachtrij."
 }
