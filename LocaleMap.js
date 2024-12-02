@@ -599,10 +599,10 @@ export const LOCALES = {
   //   "nativeName": "नेपाली",
   //   "englishName": "Nepali"
   // },
-  // "nl": {
-  //   "nativeName": "Nederlands",
-  //   "englishName": "Dutch"
-  // },
+  "nl": {
+    "nativeName": "Nederlands",
+    "englishName": "Dutch"
+  },
   // "nl-BE": {
   //   "nativeName": "Nederlands (België)",
   //   "englishName": "Dutch (Belgium)"
