@@ -1,23 +1,1747 @@
 {
+    "PrimitiveNode": {
+        "title": "Primitive",
+        "outputs": {
+            "connect to widget input": "Verbind met widget invoer",
+            "Output": "Uitvoer"
+        }
+    },
+    "Reroute": {
+        "title": "Omleiden"
+    },
     "KSampler": {
-        "title": "KSampler[example translation]",
+        "title": "KSampler",
         "inputs": {
-            "model": "模型",
-            "positive": "正向提示词",
-            "negative": "反向提示词",
-            "latent_image": "Latent"
+            "model": "model",
+            "positive": "Positief",
+            "negative": "Negatief",
+            "latent_image": "Latent Beeld"
         },
         "widgets": {
-            "seed": "随机种",
-            "control_after_generate": "运行后操作",
-            "steps": "步数",
+            "seed": "seed",
+            "control_after_generate": "controle_na_genereren",
+                "fixed": "vast",
+                "increment": "verhoog",
+                "decrement": "verlaag",
+                "randomize": "willekeurig",
+            "steps": "stappen",
             "cfg": "CFG",
-            "sampler_name": "采样器",
-            "scheduler": "调度器",
-            "denoise": "降噪"
+            "sampler_name": "sampler_naam",
+            "scheduler": "Scheduler",
+            "denoise": "Ontruis"
         },
         "outputs": {
-            "LATENT": "Latent"
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "KSamplerAdvanced": {
+        "title": "Ksampler_naam (Geavanceerd)",
+        "inputs": {
+            "model": "model",
+            "positive": "Positief",
+            "negative": "Negatief",
+            "latent_image": "Latent Beeld"
+        },
+        "widgets": {
+            "add_noise": "Voeg ruis toe",
+            "noise_seed": "Ruis seed",
+            "control_after_generate": "controle_na_genereren",
+                "fixed": "vast",
+                "increment": "verhoog",
+                "decrement": "verlaag",
+                "randomize": "willekeurig",
+            "steps": "stappen",
+            "cfg": "CFG",
+            "sampler_name": "sampler_naam",
+            "scheduler": "Scheduler",
+            "denoise": "Ontruis",
+            "start_at_step": "Ruis Begiinnen op Stap",
+            "end_at_step": "Ruis Beëindigen op Stap",
+            "return_with_leftover_noise": "Terugkeren met Overblijvende Ruis"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "SamplerCustom": {
+        "title": "커스텀 sampler_naam",
+        "inputs": {
+            "model": "model",
+            "positive": "Positief",
+            "negative": "Negatief",
+            "sampler": "sampler_naam",
+            "Sigmas": "Sigmas",
+            "latent_image": "Latent Beeld"
+        },
+        "widgets": {
+            "add_noise": "Voeg ruis toe",
+            "noise_seed": "Ruis seed",
+            "control_after_generate": "controle_na_genereren",
+            "cfg": "CFG"
+        },
+        "outputs": {
+            "output": "Uitvoer",
+            "denoised_output": "Ontruis Uitvoer"
+        }
+    },
+    "KarrasScheduler": {
+        "title": "Karras Scheduler",
+        "widgets": {
+            "steps": "stappen",
+            "sigma_max": "Sigmas maximum",
+            "sigma_min": "Sigmas minimum",
+            "rho": "rho"
+        },
+        "outputs": {
+            "SIGMAS": "Sigmas"
+        }
+    },
+    "ExponentialScheduler": {
+        "title": "Exponentiële Scheduler",
+        "widgets": {
+            "steps": "stappen",
+            "sigma_max": "Sigmas maximum",
+            "sigma_min": "Sigmas minimum"
+        },
+        "outputs": {
+            "SIGMAS": "Sigmas"
+        }
+    },
+    "PolyexponentialScheduler": {
+        "title": "Polyexponentiële Scheduler",
+        "widgets": {
+            "steps": "stappen",
+            "sigma_max": "Sigmas maximum",
+            "sigma_min": "Sigmas minimum",
+            "rho": "rho"
+        },
+        "outputs": {
+            "SIGMAS": "Sigmas"
+        }
+    },
+    "VPScheduler": {
+        "title": "VP Scheduler",
+        "widgets": {
+            "steps": "stappen",
+            "beta_d": "베타_D",
+            "beta_min": "베타_minimum",
+            "eps_s": "eps_s"
+        },
+        "outputs": {
+            "SIGMAS": "Sigmas"
+        }
+    },
+    "KSamplerSelect": {
+        "title": "Ksampler_naam Selectie",
+        "widgets": {
+            "sampler_name": "sampler_naam"
+        },
+        "outputs": {
+            "SAMPLER": "sampler_naam"
+        }
+    },
+    "SamplerDPMPP_2M_SDE": {
+        "title": "DPMPP_2M_SDE sampler_naam",
+        "widgets": {
+            "solver_type": "Oplosser Type",
+            "eta": "eta",
+            "s_noise": "s_Ruis",
+            "noise_device": "Ruis Apparaat"
+        },
+        "outputs": {
+            "SAMPLER": "sampler_naam"
+        }
+    },
+    "SamplerDPMPP_SDE": {
+        "title": "DPMPP_SDE sampler_naam",
+        "widgets": {
+            "eta": "eta",
+            "s_noise": "s_Ruis",
+            "r": "r",
+            "noise_device": "Ruis Apparaat"
+        },
+        "outputs": {
+            "SAMPLER": "sampler_naam"
+        }
+    },
+    "BasicScheduler": {
+        "title": "Basis Scheduler",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "scheduler": "Scheduler",
+            "steps": "stappen"
+        },
+        "outputs": {
+            "SIGMAS": "Sigmas"
+        }
+    },
+    "SDTurboScheduler": {
+        "title": "SD Turbo Scheduler",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "steps": "stappen"
+        },
+        "outputs": {
+            "SIGMAS": "Sigmas"
+        }
+    },
+    "SplitSigmas": {
+        "title": "Sigmas Divisie",
+        "inputs": {
+            "Sigmas": "Sigmas"
+        },
+        "widgets": {
+            "step": "stappen"
+        },
+        "outputs": {
+            "SIGMAS": "Sigmas"
+        }
+    },
+    "FlipSigmas": {
+        "title": "Sigmas Spiegeling",
+        "inputs": {
+            "Sigmas": "Sigmas"
+        },
+        "outputs": {
+            "SIGMAS": "Sigmas"
+        }
+    },
+
+
+    "VideoLinearCFGGuidance": {
+        "title": "Video Lineaire Interpolatie CFG Begeleiding",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "min_cfg": "CFG minimum"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+
+
+    "ImageOnlyCheckpointLoader": {
+        "title": "Checkpoint Lader (AfBeelding)",
+        "widgets": {
+            "ckpt_name": "Model"
+        },
+        "outputs": {
+            "MODEL": "MODEL",
+            "CLIP_VISION": "Clip Visie",
+            "VAE": "VAE"
+        }
+    },
+    "LoraLoaderModelOnly": {
+        "title": "LoRA Lader (Model)",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "lora_name": "LoRA",
+            "strength_model": "Sterkte"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+
+
+    "CheckpointLoaderSimple": {
+        "title": "Checkpoint Lader (Simpel)",
+        "widgets": {
+            "ckpt_name": "Model"
+        },
+        "outputs": {
+            "MODEL": "MODEL",
+            "CLIP": "CLIP",
+            "VAE": "VAE"
+        }
+    },
+    "VAELoader": {
+        "title": "VAE Lader",
+        "widgets": {
+            "vae_name": "VAE"
+        },
+        "outputs": {
+            "vae": "VAE"
+        }
+    },
+    "LoraLoader": {
+        "title": "LoRA Lader",
+        "inputs": {
+            "model": "model",
+            "clip": "clip"
+        },
+        "widgets": {
+            "lora_name": "LoRA",
+            "strength_model": "Sterkte",
+            "strength_clip": "Sterkte (Clip)"
+        },
+        "outputs": {
+            "MODEL": "MODEL",
+            "CLIP": "CLIP"
+        }
+    },
+    "ControlNetLoader": {
+        "title": "ControlNet Lader",
+        "widgets": {
+            "control_net_name": "ControlNet"
+        },
+        "outputs": {
+            "CONTROL_NET": "ControlNet"
+        }
+    },
+    "DiffControlNetLoader": {
+        "title": "ControlNet Lader (Diff)",
+        "inputs": {
+            "MODEL": "MODEL"
+        },
+        "widgets": {
+            "control_net_name": "ControlNet"
+        },
+        "outputs": {
+            "CONTROL_NET": "ControlNet"
+        }
+    },
+    "StyleModelLoader": {
+        "title": "Stijl Model Lader",
+        "widgets": {
+            "style_model_name": "Stijl Model"
+        },
+        "outputs": {
+            "STYLE_MODEL": "Stijl Model",
+            "style_model": "Stijl Model"
+        }
+    },
+    "CLIPVisionLoader": {
+        "title": "Clip Visie Lader",
+        "widgets": {
+            "clip_name": "Clip Visie"
+        },
+        "outputs": {
+            "CLIP_VISION": "Clip Visie"
+        }
+    },
+    "unCLIPCheckpointLoader": {
+        "title": "언 Clip Checkpoint Lader",
+        "widgets": {
+            "ckpt_name": "Model"
+        },
+        "outputs": {
+            "MODEL": "MODEL",
+            "CLIP": "CLIP",
+            "VAE": "VAE",
+            "CLIP_VISION": "Clip Visie"
+        }
+    },
+    "GLIGENLoader": {
+        "title": "GLIGEN Lader",
+        "widgets": {
+            "gligen_name": "GLIGEN"
+        },
+        "outputs": {
+            "GLIGEN": "GLIGEN"
+        }
+    },
+    "UpscaleModelLoader": {
+        "title": "Vergroting Model Lader",
+        "widgets": {
+            "model_name": "Model"
+        },
+        "outputs": {
+            "UPSCALE_MODEL": "VERGROTINGS_MODEL"
+        }
+    },
+    "HypernetworkLoader": {
+        "title": "Hyper Netwerk Lader",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "hypernetwork_name": "Hyper Netwerk",
+            "strength": "Sterkte"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+
+
+
+
+    "StyleModelApply": {
+        "title": "Stijl Model Toepassen",
+        "inputs": {
+            "conditioning": "Voorwaarde Configuratie",
+            "style_model": "Stijl Model",
+            "clip_vision_output": "Clip Visie Uitvoer"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "GLIGENTextBoxApply": {
+        "title": "GLIGEN Text 박스 Toepassen",
+        "inputs": {
+            "conditioning_to": "Voorwaarde Configuratie",
+            "clip": "clip",
+            "gligen_textbox_model": "GLIGEN"
+        },
+        "widgets": {
+            "text": "Text",
+            "width": "Breedte",
+            "height": "Hoogte",
+            "x": "X",
+            "y": "Y"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "SVD_img2vid_Conditioning": {
+        "title": "SVD_img2vid Voorwaarde Configuratie",
+        "inputs": {
+            "clip_vision": "clip_visie",
+            "init_image": "init_afbeelding",
+            "VAE": "VAE"
+        },
+        "widgets": {
+            "width": "Breedte",
+            "height": "Hoogte",
+            "video_frames": "Video 프레임",
+            "motion_bucket_id": "모션 버킷 ID",
+            "fps": "FPS",
+            "augmentation_level": "Vergroting Niveau"
+        },
+        "outputs": {
+            "positive": "Positief",
+            "negative": "Negatief",
+            "latent": "Latent Beeld"
+        }
+    },
+
+
+
+    "CLIPTextEncode": {
+        "title": "Clip Text Encodering",
+        "inputs": {
+            "clip": "clip"
+        },
+        "widgets": {
+            "text": "Text"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "CLIPSetLastLayer": {
+        "title": "Clip Overslaan",
+        "inputs": {
+            "clip": "clip"
+        },
+        "widgets": {
+            "stop_at_clip_layer": "Clip 레이어 Van 중지"
+        },
+        "outputs": {
+            "CLIP": "CLIP"
+        }
+    },
+    "Conditioning (Average)": {
+        "title": "Voorwaarde Configuratie (평균)",
+        "inputs": {
+            "conditioning_to": "Voorwaarde Configuratie 대상",
+            "conditioning_from": "Voorwaarde Configuratie 원본"
+        },
+        "widgets": {
+            "conditioning_to_strength": "Voorwaarde Configuratie 강°"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "ConditioningAverage": {
+        "title": "Voorwaarde Configuratie (평균)",
+        "inputs": {
+            "conditioning_to": "Voorwaarde Configuratie 대상",
+            "conditioning_from": "Voorwaarde Configuratie 원본"
+        },
+        "widgets": {
+            "conditioning_to_strength": "Voorwaarde Configuratie 강°"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "ConditioningCombine": {
+        "title": "Voorwaarde Configuratie (결합)",
+        "inputs": {
+            "conditioning_1": "Voorwaarde Configuratie1",
+            "conditioning_2": "Voorwaarde Configuratie2"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "ConditioningConcat": {
+        "title": "Voorwaarde Configuratie (연결)",
+        "widgets": {
+            "conditioning_to": "Voorwaarde Configuratie 대상",
+            "conditioning_from": "Voorwaarde Configuratie 원본"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "ConditioningSetArea": {
+        "title": "Voorwaarde Configuratie (Oppervlakte)",
+        "inputs": {
+            "conditioning": "Voorwaarde Configuratie"
+        },
+        "widgets": {
+            "width": "Breedte",
+            "height": "Hoogte",
+            "x": "X",
+            "y": "Y",
+            "strength": "Sterkte"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "ConditioningSetAreaPercentage": {
+        "title": "Voorwaarde Configuratie (Oppervlakte/백분율)",
+        "inputs": {
+            "conditioning": "Voorwaarde Configuratie"
+        },
+        "widgets": {
+            "width": "Breedte",
+            "height": "Hoogte",
+            "x": "X",
+            "y": "Y",
+            "strength": "Sterkte"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "ConditioningSetMask": {
+        "title": "Voorwaarde Configuratie (Masker)",
+        "inputs": {
+            "conditioning": "Voorwaarde Configuratie",
+            "mask": "Masker"
+        },
+        "widgets": {
+            "strength": "Sterkte",
+            "set_cond_area": "Voorwaarde Configuratie Oppervlakte Configuratie",
+                "default": "Basis",
+                "mask bounds": "Masker 경계"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "CLIPVisionEncode": {
+        "title": "Clip Visie Encodering",
+        "inputs": {
+            "clip_vision": "clip_visie",
+            "image": "AfBeelding"
+        },
+        "outputs": {
+            "CLIP_VISION_OUTPUT": "Clip Visie Uitvoer"
+        }
+    },
+    "unCLIPConditioning": {
+        "title": "언 Clip Voorwaarde Configuratie",
+        "inputs": {
+            "conditioning": "Voorwaarde Configuratie",
+            "clip_vision_output": "Clip Visie Uitvoer"
+        },
+        "widgets": {
+            "strength": "Sterkte",
+            "noise_augmentation": "Ruis Vergroting"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "ControlNetApply": {
+        "title": "ControlNet Toepassen",
+        "inputs": {
+            "conditioning": "Voorwaarde Configuratie",
+            "control_net": "ControlNet",
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "strength": "Sterkte"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "ControlNetApplyAdvanced": {
+        "title": "ControlNet Toepassen (Geavanceerd)",
+        "inputs": {
+            "positive": "Positief",
+            "negative": "Negatief",
+            "control_net": "ControlNet",
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "strength": "Sterkte",
+            "start_percent": "Begin Percentage",
+            "end_percent": "Eind Percentage"
+        },
+        "outputs": {
+            "positive": "Positief",
+            "negative": "Negatief"
+        }
+    },
+
+
+
+
+    "VAEEncodeForInpaint": {
+        "title": "VAE Encoder (Inpaint)",
+        "inputs": {
+            "pixels": "AfBeelding",
+            "vae": "VAE",
+            "mask": "Masker"
+        },
+        "widgets": {
+            "grow_mask_by": "Masker Uitbreiding (Verhouding)"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "SetLatentNoiseMask": {
+        "title": "Latent Beeld Ruis Masker Configuratie",
+        "inputs": {
+            "samples": "Latent Beeld",
+            "mask": "Masker"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+
+
+    "LatentFromBatch": {
+        "title": "Batch Van Latent Beeld",
+        "inputs": {
+            "samples": "Latent Beeld"
+        },
+        "widgets": {
+            "batch_index": "Batch Index",
+            "length": "Lengte"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "RepeatLatentBatch": {
+        "title": "Latent Beeld Batch Herhalen",
+        "inputs": {
+            "samples": "Latent Beeld"
+        },
+        "widgets": {
+            "amount": "Hoeveelheid"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "RebatchLatents": {
+        "title": "Latent Beeld 재Batch",
+        "inputs": {
+            "latents": "Latent Beeld"
+        },
+        "widgets": {
+            "batch_size": "Batch Grootte"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+
+
+    "LatentRotate": {
+        "title": "Latent Beeld Rotatie",
+        "inputs": {
+            "samples": "Latent Beeld"
+        },
+        "widgets": {
+            "rotation": "Rotatie",
+                "none": "Geen",
+                "90 degrees": "90°",
+                "180 degrees": "180°",
+                "270 degrees": "270°"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "LatentFlip": {
+        "title": "Latent Beeld Spiegeling",
+        "inputs": {
+            "samples": "Latent Beeld"
+        },
+        "widgets": {
+            "flip_method": "Spiegeling Methode",
+                "x-axis: vertically": "X-as: Verticaal",
+                "y-axis: horizontally": "Y-as: Horizontaal"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "LatentCrop": {
+        "title": "Latent Beeld Insnijding",
+        "inputs": {
+            "samples": "Latent Beeld"
+        },
+        "widgets": {
+            "width": "Breedte",
+            "height": "Hoogte",
+            "x": "X",
+            "y": "Y"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+
+
+    "LatentAdd": {
+        "title": "Latent Beeld Toevoegen",
+        "inputs": {
+            "samples1": "Latent Beeld1",
+            "samples2": "Latent Beeld2"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "LatentSubtract": {
+        "title": "Latent Beeld Aftrekking",
+        "inputs": {
+            "samples1": "Latent Beeld1",
+            "samples2": "Latent Beeld2"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "LatentMultiply": {
+        "title": "Latent Beeld Vermenigvuldiging",
+        "inputs": {
+            "samples": "Latent Beeld"
+        },
+        "widgets": {
+            "multiplier": "Coëfficiënt"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "LatentInterpolate": {
+        "title": "Latent Beeld Interpolatie",
+        "inputs": {
+            "samples1": "Latent Beeld1",
+            "samples2": "Latent Beeld2"
+        },
+        "widgets": {
+            "ratio": "Verhouding"
+        },
+        "outputs": {
+            "Latent": "Latent Beeld"
+        }
+    },
+
+
+    "VAEDecode": {
+        "title": "VAE Decodering",
+        "inputs": {
+            "samples": "Latent Beeld",
+            "vae": "VAE"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "VAEEncode": {
+        "title": "VAE Encodering",
+        "inputs": {
+            "pixels": "Pixels",
+            "vae": "VAE"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "EmptyLatentImage": {
+        "title": "Leeg Latent Beeld AfBeelding",
+        "widgets": {
+            "width": "Breedte",
+            "height": "Hoogte",
+            "batch_size": "Batch Grootte"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "LatentUpscale": {
+        "title": "Latent Beeld Vergroting",
+        "inputs": {
+            "samples": "Latent Beeld"
+        },
+        "widgets": {
+            "upscale_method": "Vergrotingstechniek",
+                "nearest-exact": "Nearest Exact",
+                "bilinear": "Bilineair",
+                "area": "Oppervlakte",
+                "bislerp": "Bolvormig Lineaire Interpolatie",
+                "bicubic": "Bicubisch",
+            "width": "Breedte",
+            "height": "Hoogte",
+            "crop": "Insnijding",
+                "enabled": "Ingeschakeld",
+                "disabled": "Uitgeschakeld"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "LatentUpscaleBy": {
+        "title": "Latent Beeld Vergroting (Verhouding)",
+        "inputs": {
+            "samples": "Latent Beeld"
+        },
+        "widgets": {
+            "upscale_method": "Vergrotingstechniek",
+                "nearest-exact": "Nearest Exact",
+                "bilinear": "Bilineair",
+                "area": "Oppervlakte",
+                "bislerp": "Bolvormige Lineaire Interpolatie",
+                "bicubic": "Bicubisch",
+            "scale_by": "Verhouding"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "LatentComposite": {
+        "title": "Latent Beeld 합성",
+        "inputs": {
+            "samples_to": "목표 Latent Beeld",
+            "samples_from": "원본 Latent Beeld"
+        },
+        "widgets": {
+            "x": "X",
+            "y": "Y",
+            "feather": "Veer"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "LatentCompositeMasked": {
+        "title": "Latent Beeld 합성 Masker",
+        "inputs": {
+            "destination": "대상 Latent Beeld",
+            "source": "원본 Latent Beeld",
+            "mask": "Masker"
+        },
+        "widgets": {
+            "x": "X",
+            "y": "Y",
+            "resize_source": "Latent Beeld Grootte 조절"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+
+
+
+
+    "ImageScale": {
+        "title": "AfBeelding Grootte",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "upscale_method": "Vergrotingstechniek",
+                "nearest-exact": "Nearest Exact",
+                "bilinear": "Bilineair",
+                "area": "Oppervlakte",
+                "bicubic": "Bicubisch",
+            "width": "Breedte",
+            "height": "Hoogte",
+            "crop": "Insnijding",
+                "enabled": "Ingeschakeld",
+                "disabled": "Uitgeschakeld"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "ImageScaleBy": {
+        "title": "AfBeelding Grootte (Verhouding)",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "upscale_method": "Vergrotingstechniek",
+                "nearest-exact": "Nearest Exact",
+                "bilinear": "Bilineair",
+                "area": "Oppervlakte",
+                "bicubic": "Bicubisch",
+            "scale_by": "Verhouding"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "ImageUpscaleWithModel": {
+        "title": "AfBeelding Vergroting (Model 사용)",
+        "inputs": {
+            "upscale_model": "Vergroting Model",
+            "image": "AfBeelding"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "ImageScaleToTotalPixels": {
+        "title": "전체 Pixels로 AfBeelding Grootte 조절",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "upscale_method": "Vergrotingstechniek",
+                "nearest-exact": "Nearest Exact",
+                "bilinear": "바이너리어",
+                "area": "Oppervlakte",
+                "bicubic": "Bicubisch",
+            "megapixels": "메가Pixels"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+
+
+    "ImageBlend": {
+        "title": "AfBeelding Vermenging",
+        "inputs": {
+            "image1": "AfBeelding1",
+            "image2": "AfBeelding2"
+        },
+        "widgets": {
+            "blend_factor": "Vermenging Coëfficiënt",
+            "blend_mode": "Vermenging 모드",
+                "normal": "보통",
+                "multiply": "Vermenigvuldiging",
+                "screen": "스크린",
+                "overlay": "오버레이",
+                "soft_light": "부드러운 빛"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "ImageBlur": {
+        "title": "AfBeelding 흐리게",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "blur_radius": "흐림 반경",
+            "sigma": "Sigmas"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "ImageQuantize": {
+        "title": "AfBeelding 양자화",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "colors": "색상 수",
+            "dither": "디더링",
+                "none": "Geen",
+                "floyd-steinberg": "플로이드 스타인버그 알고리즘"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "ImageSharpen": {
+        "title": "AfBeelding 선명하게",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "sharpen_radius": "날카로운 범위",
+            "sigma": "Sigmas",
+            "alpha": "알파"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+
+
+    "Canny": {
+        "title": "캐니",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "low_threshold": "낮은 임계값",
+            "high_threshold": "높은 임계값"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+
+
+    "ImageCrop": {
+        "title": "AfBeelding Insnijding",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "width": "Breedte",
+            "height": "Hoogte",
+            "x": "X",
+            "y": "Y"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "RepeatImageBatch": {
+        "title": "AfBeelding Herhalen Batch",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "amount": "수량"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+
+
+    "SaveImage": {
+        "title": "AfBeelding Opslaan",
+        "inputs": {
+            "images": "AfBeelding"
+        },
+        "widgets": {
+            "filename_prefix": "Bestandsnaam voorvoegsel"
+        }
+    },
+    "PreviewImage": {
+        "title": "미리보기 AfBeelding",
+        "inputs": {
+            "images": "AfBeelding"
+        }
+    },
+    "LoadImage": {
+        "title": "AfBeelding Lader",
+        "widgets": {
+            "image": "AfBeelding",
+            "choose file to upload": "업로드할 파일 Selectie"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding",
+            "MASK": "Masker"
+        }
+    },
+    "ImageInvert": {
+        "title": "AfBeelding 반전",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "ImageBatch": {
+        "title": "AfBeelding Batch",
+        "inputs": {
+            "image1": "AfBeelding1",
+            "image2": "AfBeelding2"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "ImagePadForOutpaint": {
+        "title": "AfBeelding 패드 (아웃페인팅용)",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "left": "왼쪽",
+            "top": "위",
+            "right": "오른쪽",
+            "bottom": "아래",
+            "feathering": "Veer링"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding",
+            "MASK": "Masker"
+        }
+    },
+    "EmptyImage": {
+        "title": "Leeg AfBeelding",
+        "widgets": {
+            "width": "Breedte",
+            "height": "Hoogte",
+            "batch_size": "Batch Grootte",
+            "color": "컬러"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "ImageCompositeMasked": {
+        "title": "AfBeelding 합성 (Masker Toepassen)",
+        "inputs": {
+            "destination": "대상 AfBeelding",
+            "source": "원본 AfBeelding",
+            "mask": "Masker"
+        },
+        "widgets": {
+            "x": "X",
+            "y": "Y",
+            "resize_source": "원본 AfBeelding Grootte 조절"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+
+
+
+
+    "PorterDuffImageComposite": {
+        "title": "포터-더프 AfBeelding Samenvoeger",
+        "inputs": {
+            "source": "원본 AfBeelding",
+            "source_alpha": "원본 알파",
+            "destination": "대상 AfBeelding",
+            "destination_alpha": "대상 알파"
+        },
+        "widgets": {
+            "mode": "모드"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding",
+            "MASK": "Masker"
+        }
+    },
+    "SplitImageWithAlpha": {
+        "title": "AfBeelding Divisie (알파)",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding",
+            "MASK": "Masker"
+        }
+    },
+    "JoinImageWithAlpha": {
+        "title": "AfBeelding 결합 (알파)",
+        "inputs": {
+            "image": "AfBeelding",
+            "alpha": "투명 Masker"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "LoadImageMask": {
+        "title": "AfBeelding Masker Lader",
+        "widgets": {
+            "image": "AfBeelding",
+            "channel": "채널",
+            "choose file to upload": "업로드할 파일 Selectie"
+        },
+        "outputs": {
+            "MASK": "Masker"
+        }
+    },
+    "MaskToImage": {
+        "title": "Masker를 AfBeelding로 변환",
+        "inputs": {
+            "mask": "Masker"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "ImageToMask": {
+        "title": "AfBeelding를 Masker로 변환",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "channel": "채널"
+        },
+        "outputs": {
+            "MASK": "Masker",
+                "red": "레드",
+                "green": "그린",
+                "blue": "블루"
+        }
+    },
+    "ImageColorToMask": {
+        "title": "AfBeelding 컬러 Masker",
+        "inputs": {
+            "image": "AfBeelding"
+        },
+        "widgets": {
+            "color": "컬러"
+        },
+        "outputs": {
+            "MASK": "Masker"
+        }
+    },
+    "SolidMask": {
+        "title": "솔리드 Masker (단색)",
+        "widgets": {
+            "value": "명°",
+            "width": "Breedte",
+            "height": "Hoogte"
+        },
+        "outputs": {
+            "MASK": "Masker"
+        }
+    },
+    "InvertMask": {
+        "title": "인버트 Masker (반전)",
+        "inputs": {
+            "mask": "Masker"
+        },
+        "outputs": {
+            "MASK": "Masker"
+        }
+    },
+    "CropMask": {
+        "title": "크롭 Masker (Insnijding)",
+        "inputs": {
+            "mask": "Masker"
+        },
+        "widgets": {
+            "x": "X",
+            "y": "Y",
+            "width": "Breedte",
+            "height": "Hoogte"
+        },
+        "outputs": {
+            "MASK": "Masker"
+        }
+    },
+    "MaskComposite": {
+        "title": "Masker 합성",
+        "inputs": {
+            "destination": "대상 Masker",
+            "source": "원본 Masker"
+        },
+        "widgets": {
+            "x": "X",
+            "y": "Y",
+            "operation": "Vermenging Methode",
+                "multiply": "Vermenigvuldiging",
+                "add": "더하기",
+                "subtract": "Aftrekking",
+                "and": "논리곱",
+                "or": "논리합",
+                "xor": "배타적 논리합"
+        },
+        "outputs": {
+            "MASK": "Masker"
+        }
+    },
+    "FeatherMask": {
+        "title": "Veer Masker (부드러운 가장자리)",
+        "inputs": {
+            "mask": "Masker"
+        },
+        "widgets": {
+            "left": "왼쪽",
+            "top": "위",
+            "right": "오른쪽",
+            "bottom": "아래"
+        },
+        "outputs": {
+            "MASK": "Masker"
+        }
+    },
+    "GrowMask": {
+        "title": "그로우 Masker (Uitbreiding)",
+        "inputs": {
+            "mask": "Masker"
+        },
+        "widgets": {
+            "expand": "Uitbreiding",
+            "tapered_corners": "둥근 모서리"
+        },
+        "outputs": {
+            "MASK": "Masker"
+        }
+    },
+    
+
+
+
+    "VAEDecodeTiled": {
+        "title": "VAE Decoderingstegel",
+        "inputs": {
+            "samples": "Latent Beeld",
+            "vae": "VAE"
+        },
+        "widgets": {
+            "tile_size": "Tegel 사이즈"
+        },
+        "outputs": {
+            "IMAGE": "AfBeelding"
+        }
+    },
+    "VAEEncodeTiled": {
+        "title": "VAE Encodering Tegel",
+        "inputs": {
+            "pixels": "AfBeelding",
+            "vae": "VAE"
+        },
+        "widgets": {
+            "tile_size": "Tegel Grootte"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "TomePatchModel": {
+        "title": "Tome Patch Model",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "ratio": "Verhouding"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "SaveLatent": {
+        "title": "Latent Beeld Opslaan",
+        "inputs": {
+            "samples": "Latent Beeld"
+        },
+        "widgets": {
+            "samples": "Latent Beeld",
+            "latent": "Latent Beeld"
+        }
+    },
+    "LoadLatent": {
+        "title": "Latent Beeld Lader",
+        "widgets": {
+            "filename_prefix": "Bestandsnaam voorvoegsel"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "LatentBlend": {
+        "title": "Latent Beeld Vermenging",
+        "inputs": {
+            "samples1": "Latent Beeld1",
+            "samples2": "Latent Beeld2"
+        },
+        "widgets": {
+            "blend_factor": "Vermenging Coëfficiënt"
+        },
+        "outputs": {
+            "LATENT": "Latent Beeld"
+        }
+    },
+    "FreeU": {
+        "title": "FreeU",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "b1": "B1",
+            "b2": "B2",
+            "s1": "S1",
+            "s2": "S2"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "FreeU_V2": {
+        "title": "FreeU_V2",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "b1": "B1",
+            "b2": "B2",
+            "s1": "S1",
+            "s2": "S2"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "HyperTile": {
+        "title": "Hyper Tegel",
+        "inputs":{ 
+            "model": "model"
+        },
+        "widgets": {
+            "tile_size": "Tegel Grootte",
+            "swap_size": "Wissel Grootte",
+            "max_depth": "Maximum Diepte",
+            "scale_depth": "Schaal Diepte"
+        }
+    },
+    "PatchModelAddDownscale": {
+        "title": "Patch Model Schaalverlaging Toevoegen",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "block_number": "Blok Nummer",
+            "downscale_factor": "Schaalverlaging Coëfficiënt",
+            "start_percent": "Begin Percentage",
+            "end_percent": "Eind Percentage",
+            "downscale_after_skip": "건너뛰기 후 Schaalverlaging"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "SaveAnimatedWEBP": {
+        "title": "Geanimeerde WEBP Opslaan",
+        "inputs": {
+            "images": "AfBeelding"
+        },
+        "widgets": {
+            "filename_prefix": "Bestandsnaam voorvoegsel",
+            "fps": "fps",
+            "lossless": "무손실",
+            "quality": "퀄리티",
+            "method": "Methode",
+                "fastest": "가장 빠름",
+                "slowest": "가장 느림"
+        }
+    },
+    "SaveAnimatedPNG": {
+        "title": "Geanimeerde PNG Opslaan",
+        "inputs": {
+            "images": "AfBeelding"
+        },
+        "widgets": {
+            "filename_prefix": "Bestandsnaam voorvoegsel",
+            "fps": "fps",
+            "compress_level": "Compressie Niveau"
+        }
+    },
+
+
+
+
+    "DiffusersLoader": {
+        "title": "디퓨저 Lader",
+        "widgets": {
+            "model_path": "Model 경로"
+        },
+        "outputs": {
+            "MODEL": "MODEL",
+            "CLIP": "CLIP",
+            "VAE": "VAE"
+        }
+    },
+    "CLIPLoader": {
+        "title": "Clip Lader",
+        "widgets": {
+            "clip_name": "Clip Naam"
+        },
+        "outputs": {
+            "CLIP": "CLIP"
+        }
+    },
+    "CheckpointLoader": {
+        "title": "Checkpoint Lader",
+        "widgets": {
+            "config_name": "Configuratie Naam",
+            "ckpt_name": "Checkpoint Naam"
+        },
+        "outputs": {
+            "MODEL": "MODEL",
+            "CLIP": "CLIP",
+            "VAE": "VAE"
+        }
+    },
+    "UNETLoader": {
+        "title": "UNET Lader",
+        "widgets": {
+            "unet_name": "UNET Naam"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "DualCLIPLoader": {
+        "title": "듀얼 Clip Lader",
+        "widgets": {
+            "clip_name1": "Clip1",
+            "clip_name2": "Clip2"
+        },
+        "outputs": {
+            "CLIP": "CLIP"
+        }
+    },
+
+
+    "ConditioningZeroOut": {
+        "title": "Voorwaarde Configuratie (제로 아웃)",
+        "inputs": {
+            "conditioning": "Voorwaarde Configuratie"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "ConditioningSetTimestepRange": {
+        "title": "Voorwaarde Configuratie (타임 stappen 범위 Configuratie)",
+        "inputs": {
+            "conditioning": "Voorwaarde Configuratie"
+        },
+        "widgets": {
+            "start": "Begin",
+            "end": "끝"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "CLIPTextEncodeSDXL": {
+        "title": "Clip Text Encodering SDXL",
+        "inputs": {
+            "clip": "clip"
+        },
+        "widgets": {
+            "width": "Breedte",
+            "height": "Hoogte",
+            "crop_w": "Insnijdingsbreedte",
+            "crop_h": "Insnijdingshoogte",
+            "target_width": "Doelbreedte",
+            "target_height": "Doelhoogte",
+            "text_g": "Text g",
+            "text_l": "Text l"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+    "CLIPTextEncodeSDXLRefiner": {
+        "title": "Clip Text Encodering SDXL 리파이너",
+        "inputs": {
+            "clip": "clip"
+        },
+        "widgets": {
+            "ascore": "ascore",
+            "width": "Breedte",
+            "height": "Hoogte",
+            "text": "Text"
+        },
+        "outputs": {
+            "CONDITIONING": "CONDITIONERING"
+        }
+    },
+
+
+    "ModelMergeSimple": {
+        "title": "Model Samenvoeger (Simpel)",
+        "inputs": {
+            "model1": "Model1",
+            "model2": "Model2"
+        },
+        "widgets": {
+            "ratio": "Verhouding"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "ModelMergeBlocks": {
+        "title": "Model Samenvoeger (Opslaan)",
+        "inputs": {
+            "model1": "Model1",
+            "model2": "Model2"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "CheckpointSave": {
+        "title": "Checkpoint Opslaan",
+        "inputs": {
+            "model": "model",
+            "clip": "clip",
+            "vae": "VAE"
+        },
+        "widgets": {
+            "filename_prefix": "Bestandsnaam voorvoegsel"
+        }
+    },
+    "CLIPMergeSimple": {
+        "title": "Clip Samenvoeger (Simpel)",
+        "inputs": {
+            "clip1": "Clip1",
+            "clip2": "Clip2"
+        },
+        "widgets": {
+            "ratio": "Verhouding"
+        },
+        "outputs": {
+        }
+    },
+    "VAESave": {
+        "title": "VAE Opslaan",
+        "inputs": {
+            "VAE": "VAE"
+        },
+        "widgets": {
+            "filename_prefix": "Bestandsnaam voorvoegsel"
+        }
+    },
+    "CLIPSave": {
+        "title": "Clip Opslaan",
+        "inputs": {
+            "CLIP": "CLIP"
+        },
+        "widgets": {
+            "filename_prefix": "Bestandsnaam voorvoegsel"
+        }
+    },
+    "ModelMergeBlockNumber": {
+        "title": "Model Samenvoeger (Blok Nummer)",
+        "inputs": {
+            "model1": "Model1",
+            "model2": "Model2"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "ModelMergeSDXL": {
+        "title": "Model Samenvoeger (SDXL)",
+        "inputs": {
+            "model1": "Model1",
+            "model2": "Model2"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "ModelMergeSubtract": {
+        "title": "Model Samenvoeger (뺴기)",
+        "inputs": {
+            "model1": "Model1",
+            "model2": "Model2"
+        },
+        "widgets": {
+            "multiplier": "Coëfficiënt"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "ModelMergeAdd": {
+        "title": "Model Samenvoeger (더하기)",
+        "inputs": {
+            "model1": "Model1",
+            "model2": "Model2"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "ModelMergeSDXLTransformers": {
+        "title": "Model Samenvoeger (SDXL Transformers)",
+        "inputs": {
+            "model1": "Model1",
+            "model2": "Model2"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+    "ModelMergeSDXLDetailedTransformers": {
+        "title": "Model Samenvoeger (SDXL Gedetailleerde Transformers)",
+        "inputs": {
+            "model1": "Model1",
+            "model2": "Model2"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
+        }
+    },
+
+    "ModelSamplingDiscrete": {
+        "title": "Model Sampling (Discreet)",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "sampling": "Sampling",
+                "eps": "eps",
+                "v-prediction": "Variabele voorspelling",
+                "zsnr": "zsnr"
+        }
+    },
+    "ModelSamplingContinuousEDM": {
+        "title": "Model Sampling (Doorlopende EDM)",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "sampling": "Sampling",
+                "v_prediction": "Variabele voorspelling",
+                "eps": "eps",
+            "sigma_max": "Sigmas maximum",
+            "sigma_min": "Sigmas minimum"
+        }
+    },
+    "RescaleCFG": {
+        "title": "CFG Herschaler",
+        "inputs": {
+            "model": "model"
+        },
+        "widgets": {
+            "multiplier": "Coëfficiënt"
+        },
+        "outputs": {
+            "MODEL": "MODEL"
         }
     }
 }
